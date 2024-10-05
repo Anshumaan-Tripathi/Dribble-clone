@@ -292,6 +292,12 @@ html,body{
     width: 100%;
     object-fit: cover;
 }
+.box video::-webkit-media-controls{
+    display: none;
+}
+.box video::-ms-media-controls{
+    display: none;
+}
 .bottom-hover{
     height: 40%;
     width: 100%;
