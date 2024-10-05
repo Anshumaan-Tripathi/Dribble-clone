@@ -504,11 +504,11 @@ html,body{
     align-items: center;
     max-width: 1260px;
     justify-content: space-between;
-    /* gap: 350px; */
 }
-.left, .right{
+.left, .right, a{
     display: flex;
     list-style-type: none;
+    text-decoration: none;
     align-items: center;
     gap: 25px;
 }
