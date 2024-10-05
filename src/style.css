@@ -287,7 +287,7 @@ html,body{
     }
 }
 
-.box img{
+.box img, video{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -344,7 +344,7 @@ html,body{
     border-radius: 50px;
 }
 #page-3{
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
 }
 
@@ -407,4 +407,108 @@ html,body{
 .join a{
     text-decoration: underline;
     color: black;
+    font-size: 20px;
+}
+
+#branding{
+    width: 100%;
+    /* background-color: rgb(109, 109, 109); */
+    margin: 50px auto;
+    padding: 5px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.brands{
+    width: 200px;
+    /* height: 150px; */
+    /* background-color: #5be3ed; */
+    margin-right:25px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgb(241, 207, 255);
+    overflow: hidden;
+    transition: box-shadow ease 0.5s;
+    animation: scrolling 5s linear infinite;
+    &:hover{
+        box-shadow: 0px 0px 5px 5px rgb(241, 207, 255);
+    }
+}
+
+@keyframes scrolling{
+    0%{
+        transform: translate(0%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+.brands img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+.brand-info p{
+    height: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 25px;
+    max-width: fit-content;
+}
+#footer img{
+    height: 64px;
+    padding-right: 70px;
+}
+.list{
+    font-family:'Source Serif 4';
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    text-transform: capitalize;
+    padding-right: 70px;
+}
+.list li{
+    font-size: 14px;
+    font-weight: 500;
+}
+.social{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+.social a{
+    font-size: 22px;
+    color: black;
+}
+#footer-2{
+    font-family: sans-serif;
+    font-weight: 300;
+    color: rgb(50, 49, 49);
+    font-size: 14px;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 1260px;
+    justify-content: space-between;
+    /* gap: 350px; */
+}
+.left, .right{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 25px;
 }
