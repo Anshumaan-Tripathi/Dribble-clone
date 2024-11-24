@@ -139,6 +139,7 @@ html,body{
     font-weight: 500;
     letter-spacing: 0.5px;
     font-size: 16px;
+    text-align: center;
 }   
 #hero-heading{
     max-width: 780px;
@@ -156,6 +157,7 @@ html,body{
     font-family: 'Source Serif 4';
     font-weight: 500;
     font-size: 20px;
+    text-align: center;
 }
 #get-started-button{
     margin-top: 32px;
@@ -348,6 +350,7 @@ html,body{
     background-color: transparent;
     border: 1px solid black;
     border-radius: 50px;
+    width: max-content;
 }
 #page-3{
     /* height: 100%; */
@@ -381,6 +384,10 @@ html,body{
 }
 #banner-button{
     margin:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #start{
     background-color: rgb(0, 0, 0);
@@ -464,57 +471,263 @@ html,body{
     margin-bottom: 5px;
 }
 
-#footer{
+#footer {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center elements horizontally */
     margin: auto;
     padding: 25px;
-    max-width: fit-content;
+    width: 100%; /* Take full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
-#footer img{
+
+#footer img {
     height: 64px;
-    padding-right: 70px;
+    padding-right: 20px; /* Reduce padding for better responsiveness */
 }
-.list{
-    font-family:'Source Serif 4';
+
+.list {
+    font-family: 'Source Serif 4';
     display: flex;
+    flex-wrap: wrap; /* Allow list items to wrap */
     list-style-type: none;
     align-items: center;
-    justify-content: space-between;
-    gap: 55px;
-    text-transform: capitalize;
-    padding-right: 70px;
+    justify-content: center; /* Center items */
+    gap: 20px; /* Reduce gap for better responsiveness */
+    padding-right: 0; /* Remove excessive padding */
+    margin: 10px 0; /* Add margin for spacing between rows */
 }
-.list li{
+
+.list li {
     font-size: 14px;
     font-weight: 500;
+    padding-right: 20px;
 }
-.social{
+
+.social {
     display: flex;
     align-items: center;
     gap: 13px;
+    margin-top: 10px; /* Add space above social links */
 }
-.social a{
+
+.social a {
     font-size: 22px;
     color: black;
 }
-#footer-2{
+
+#footer-2 {
     font-family: sans-serif;
     font-weight: 300;
     color: rgb(50, 49, 49);
     font-size: 14px;
-    margin: 50px auto;
-    padding-bottom: 50px;
+    margin: 20px auto; /* Reduce margin */
+    padding: 20px 10px; /* Add padding for spacing */
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     align-items: center;
-    max-width: 1260px;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out elements */
+    width: 100%; /* Take full width */
+    box-sizing: border-box;
 }
-.left, .right, a{
+
+.left, .right {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     list-style-type: none;
-    text-decoration: none;
-    align-items: center;
-    gap: 25px;
+    gap: 15px; /* Reduce gap for better responsiveness */
 }
+
+.right h4 {
+    margin-right: 10px; /* Add margin for spacing */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #footer {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .list {
+        justify-content: center; /* Center list items */
+    }
+
+    #footer-2 {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center; /* Align text */
+    }
+
+    .left, .right {
+        justify-content: center;
+    }
+}
+
+
+
+/* General responsiveness */
+@media (max-width: 1200px) {
+    #nav {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    
+    #nav-part1, #nav-part2 {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    #nav-part1{
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+        padding-top: 20px;
+    }
+
+    #search-container {
+        width: 200px;
+    }
+
+    #sign-up {
+        padding: 10px 20px;
+    }
+
+    #hero-heading h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav img {
+        height: 50px;
+    }
+
+    #search-container {
+        width: 150px;
+        padding: 0 10px;
+    }
+
+    #hero-heading h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    #para h4 {
+        font-size: 18px;
+    }
+
+    #get-started-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .elem {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card-text p {
+        font-size: 12px;
+    }
+
+    .card-text .skills p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #nav img {
+        padding-left: 0;
+    }
+
+    #search-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #sign-up, #log-in {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #hero-heading h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #bottom {
+        /* height: auto; */
+        white-space: nowrap;
+    }
+
+    #page2 h1 {
+        font-size: 30px;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .bottom-hover h5 {
+        font-size: 12px;
+    }
+}
+
+/* Ensure a mobile-friendly banner */
+@media (max-width: 480px) {
+    #bottom-banner {
+        padding: 40px 20px;
+    }
+
+    .banner-heading h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .banner-para p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    #start, #learn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .join {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .join p {
+        font-size: 16px;
+    }
+
+    .join a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 800px) {
+    #page2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
