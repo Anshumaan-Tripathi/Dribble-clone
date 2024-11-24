@@ -22,7 +22,7 @@
         <div id="nav-part1">
           <h4>Find designers</h4>
           <h4>Inspiration</h4>
-          <h4>Jobs</h4>
+          <h4 id="jobs-link-header">Jobs</h4>
           <h4>Go Pro</h4>
         </div>
         <img
@@ -39,8 +39,8 @@
               placeholder="Search..."
             />
           </div>
-          <button id="log-in">Log in</button>
-          <button id="sign-up">Sign up</button>
+          <button id="log-in" onclick="location.href='login.html'">Log in</button>
+          <button id="sign-up" onclick="location.href='signup.html'">Sign up</button>
         </div>
       </div>
       <div id="content">
@@ -448,7 +448,7 @@
         <li>Cookies</li>
       </div>
       <div class="right">
-        <li>Jobs</li>
+        <h4 id="jobs-link-footer">Jobs</h4>
         <li>Designers</li>
         <li>Freelancers</li>
         <li>Tags</li>
@@ -456,6 +456,16 @@
         <li>Resources</li>
       </div>
     </div>
-    <div class="test"></div>
+
+    <script>
+  document.getElementById('jobs-link-header').addEventListener('click', () => {
+    window.location.href = 'jobs.html';
+  });
+
+  document.getElementById('jobs-link-footer').addEventListener('click', () => {
+    window.location.href = 'jobs.html';
+  });
+</script>
+
   </body>
 </html>
